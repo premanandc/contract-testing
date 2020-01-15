@@ -19,12 +19,7 @@ public class CustomerClient {
   }
 
   public Collection<Customer> findAll() {
-    ParameterizedTypeReference<Collection<Customer>> reference = new ParameterizedTypeReference<Collection<Customer>>() {
-    };
+    ParameterizedTypeReference<Collection<Customer>> reference = new ParameterizedTypeReference<Collection<Customer>>() {};
     return http.exchange(baseUri + "/customers", GET, null, reference).getBody();
-  }
-
-  public Customer findById(long customerId) {
-    return http.exchange(baseUri + "/customers/{id}", GET, null, Customer.class, customerId).getBody();
   }
 }
