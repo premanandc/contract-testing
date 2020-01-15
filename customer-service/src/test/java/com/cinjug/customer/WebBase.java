@@ -9,11 +9,12 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
+import static com.cinjug.customer.Customer.create;
 import static java.util.Arrays.asList;
 import static org.mockito.BDDMockito.given;
 
 @RunWith(MockitoJUnitRunner.class)
-public class WebClientBase {
+public class WebBase {
 
   @InjectMocks
   private CustomerController customerController;
@@ -25,10 +26,6 @@ public class WebClientBase {
     List<Customer> customers = asList(create(1), create(2), create(3));
     given(repository.findAll()).willReturn(customers);
     RestAssuredMockMvc.standaloneSetup(customerController);
-  }
-
-  private static Customer create(long i) {
-    return new Customer(i, "First" + i, "Last" + i, "first" + i + "@test.com");
   }
 
 }

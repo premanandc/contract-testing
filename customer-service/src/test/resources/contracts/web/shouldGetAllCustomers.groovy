@@ -1,4 +1,4 @@
-package contracts.webClient
+package contracts.web
 
 import org.springframework.cloud.contract.spec.Contract
 

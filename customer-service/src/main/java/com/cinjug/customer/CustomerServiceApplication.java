@@ -15,7 +15,7 @@ public class CustomerServiceApplication {
   }
 
   @Bean
-  public CommandLineRunner dataSeed(CustomerRepository repository) {
+  public CommandLineRunner initDb(CustomerRepository repository) {
     return args -> IntStream.rangeClosed(1, 3)
         .mapToObj(Customer::create)
         .map(repository::save)
