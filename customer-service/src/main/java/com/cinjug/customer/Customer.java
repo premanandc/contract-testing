@@ -25,7 +25,7 @@ class Customer {
   @Email
   private String email;
 
-  private Customer(@NotBlank String firstName,
+  Customer(@NotBlank String firstName,
                    @NotBlank String lastName,
                    @Email String email) {
     this.firstName = firstName;
@@ -33,7 +33,4 @@ class Customer {
     this.email = email;
   }
 
-  static Customer create(int i) {
-    return new Customer("First" + i, "Last" + i, "first" + i + "@test.com");
-  }
 }

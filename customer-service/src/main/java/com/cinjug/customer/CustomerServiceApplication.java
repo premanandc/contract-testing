@@ -17,9 +17,13 @@ public class CustomerServiceApplication {
   @Bean
   public CommandLineRunner initDb(CustomerRepository repository) {
     return args -> IntStream.rangeClosed(1, 3)
-        .mapToObj(Customer::create)
+        .mapToObj(CustomerServiceApplication::customerForTesting)
         .map(repository::save)
         .forEach(System.out::println);
+  }
+
+  static Customer customerForTesting(int i) {
+    return new Customer("First" + i, "Last" + i, "first" + i + "@test.com");
   }
 }
 
