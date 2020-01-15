@@ -1,5 +1,6 @@
-package com.bcus.customer.client;
+package com.cinjug.customer.client;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@Ignore("We don't need this integration test any more!")
 public class CustomerClientIntegrationTests {
   @Autowired
   private CustomerClient client;
@@ -23,7 +23,7 @@ public class CustomerClientIntegrationTests {
 
     Collection<Customer> customers = client.findAll();
 
-    assertThat(customers).hasSize(3);
+    Assertions.assertThat(customers).hasSize(3);
   }
 
 }

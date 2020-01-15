@@ -1,4 +1,4 @@
-package com.bcus.customer.client;
+package com.cinjug.customer.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

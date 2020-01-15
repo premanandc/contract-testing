@@ -1,4 +1,4 @@
-package com.bcus.customer.client;
+package com.cinjug.customer.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +16,7 @@ import static org.springframework.cloud.contract.stubrunner.spring.StubRunnerPro
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment= NONE)
-@AutoConfigureStubRunner(ids = {"com.bcus:customer-service:${customer-service.version}:stubs:8080"},
+@AutoConfigureStubRunner(ids = {"com.cinjug:customer-service:${customer-service.version}:stubs:8080"},
     stubsMode = LOCAL)
 @DirtiesContext
 public class CustomerClientContractTests {

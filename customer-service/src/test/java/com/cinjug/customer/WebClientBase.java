@@ -1,4 +1,4 @@
-package com.bcus.customer;
+package com.cinjug.customer;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;

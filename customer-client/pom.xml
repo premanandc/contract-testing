@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.bcus.customer.client</groupId>
+  <groupId>com.cinjug.customer.client</groupId>
   <artifactId>customer-client</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -47,7 +47,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.bcus</groupId>
+      <groupId>com.cinjug</groupId>
       <artifactId>customer-service</artifactId>
       <version>0.0.1-SNAPSHOT</version>
       <classifier>stubs</classifier>

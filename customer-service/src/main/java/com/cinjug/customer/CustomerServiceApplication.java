@@ -1,4 +1,4 @@
-package com.bcus.customer;
+package com.cinjug.customer;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,12 +16,10 @@ public class CustomerServiceApplication {
 
   @Bean
   public CommandLineRunner dataSeed(CustomerRepository repository) {
-    return args -> {
-      IntStream.rangeClosed(1, 3)
-          .mapToObj(Customer::create)
-          .map(repository::save)
-          .forEach(System.out::println);
-    };
+    return args -> IntStream.rangeClosed(1, 3)
+        .mapToObj(Customer::create)
+        .map(repository::save)
+        .forEach(System.out::println);
   }
 }
 

@@ -1,4 +1,4 @@
-package com.bcus.customer;
+package com.cinjug.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

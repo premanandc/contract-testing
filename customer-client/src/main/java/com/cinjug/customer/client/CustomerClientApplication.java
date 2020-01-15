@@ -1,4 +1,4 @@
-package com.bcus.customer.client;
+package com.cinjug.customer.client;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +14,8 @@ public class CustomerClientApplication {
   }
 
   @Bean
-  public CustomerClient client(RestTemplateBuilder builder, @Value("${customer-service.host:http://localhost:8080}") String baseUri) {
+  public CustomerClient client(RestTemplateBuilder builder,
+                               @Value("${customer-service.host:http://localhost:8080}") String baseUri) {
     return new CustomerClient(builder, baseUri);
   }
 }

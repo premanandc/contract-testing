@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.bcus</groupId>
+  <groupId>com.cinjug</groupId>
   <artifactId>customer-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -82,7 +82,7 @@
         <version>${spring-cloud-contract.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <packageWithBaseClasses>com.bcus.customer</packageWithBaseClasses>
+          <packageWithBaseClasses>com.cinjug.customer</packageWithBaseClasses>
         </configuration>
       </plugin>
     </plugins>
