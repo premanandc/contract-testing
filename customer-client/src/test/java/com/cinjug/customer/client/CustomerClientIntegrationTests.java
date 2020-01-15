@@ -19,7 +19,6 @@ public class CustomerClientIntegrationTests {
     private CustomerClient client;
 
     @Test
-    @Ignore("Don't want tests to be breaking")
     public void shouldReturnAllCustomers() {
 
         Collection<Customer> customers = client.findAll();
